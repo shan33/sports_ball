@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /*border: solid 3px red;*/
+    background: #DCDCDC
+}
+.container{
+    width: 100%;
+    padding: 0px 0px;
+    background: #DCDCDC;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}

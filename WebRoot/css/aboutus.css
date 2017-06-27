@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contactus{
+    color: #808080;
+    padding-bottom: 20px;
+    padding-left: 4%;
+    padding-top: 7%;
+
+}
+.contact{
+    font: 40px "Mistral";
+    padding-left: 20px;
+
+}
+.ul{
+    padding-top: 5%;
+
+}
+.ul dd{
+    margin:5px 0;
+    float:left;
+    padding-left: 30%;
+    width: 70%;
+
+}
+.ul input{
+    width:500px;
+    height: 30px;
+    font: 12px "Arial";
+    color: black;
+    border-radius:8px;
+    border-color:#0099CC;
+    background-color: white;
+
+}
+.ul input[type='submit']{
+    width: 160px;
+    height: 40px;
+    font: 16px "Arial";
+    color: white;
+    background-color:#0099CC;
+    border:#0099CC;
+
+}
+.ul textarea{
+    width:500px;
+    height:200px;
+    float:left;
+    border-radius:8px;
+    background-color: white;
+    border-color: #0099CC;
+
+}

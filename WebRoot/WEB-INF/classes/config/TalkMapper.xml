@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.TalkMapper">
+	<insert id="addTalk" parameterType="entity.Talk" useGeneratedKeys="true" keyProperty="id">
+		insert into talk (title,context,time,uid,kind) values (#{title},#{context},#{time},#{uid},#{kind})
+	</insert>
+    <select id="getAllTalks" resultMap="talks">
+		select x.*,
+			 y.id yid,
+			 y.uid yuid,
+			 y.context ycontext,
+			 y.time ytime
+					 
+		from
+			talk x
+		left join
+			user_talk y
+		on
+			x.id = y.tid
+		order by id desc
+	</select> 
+	<resultMap type="entity.Talk" id="talks">
+		<id property="id" column="id"/>
+		<result property="title" column="title"/>
+		<result property="context" column="context"/>
+		<result property="time" column="time"/>
+		<result property="uid" column="uid"/>
+		<result property="kind" column="kind"/>
+		<collection property="talkContexts" ofType="entity.TalkContext">
+			<id property="id" column="yid"/>
+			<result property="uid" column="yuid"/>
+			<result property="context" column="ycontext"/>
+			<result property="time" column="ytime"/>
+		</collection>
+	</resultMap>
+	
+ 	<select id="getTalksByPage" resultType="entity.Talk">
+		select * from talk 
+	    order by id desc
+		limit
+			#{0},#{1}
+	</select>
+</mapper>

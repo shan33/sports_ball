@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    height: 100%;	
+    /*background: url("../pic/bottom.jpg");*/
+}
+
+/*第一页登录*/
+#index-login .modal-content{
+        position: relative;
+        height: 550px;
+}
+#index-login .modal-content iframe{
+        overflow-y: hidden;
+        width: 100%;
+        height: 520px;
+}
+/*文字居中*/
+.p_center{
+    text-align: center;
+    margin: auto auto;
+    font-size: small;
+}
+/*文件上传*/
+.upload{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: 0 4%;
+    top: 16%;
+    border-radius: 50% 50%;
+
+}
+/*个人信息*/
+.info{
+    float: left;
+    width: 0;
+    height: 0;
+    margin-top: 0;
+    border: none;
+}
+#badmiton{
+    position: absolute;
+    left: 50px;
+    top: 40% ;
+    width: 50px;
+    height: 50px;
+}
+#badmiton img{
+    width: 50px;
+    height: 50px;
+}
+#my_info p{
+    margin-top: 18%;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+#my_info p:first-child{
+    margin-top: 30%;
+}
+#my_info .user_pic{
+    width: 70px;
+    height: 30px;
+    border-radius: 10%;
+    background-color: #eee;
+    margin: 5% 30%;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+/*中间版块*/
+.main{
+    float: left;
+    width: 25%;
+    height: 600px;
+    margin-top: 3%;
+    margin-left: 10%;
+}
+#middle{
+    width: 12%;
+    height: 600px;
+    margin-left: 8%;
+}
+#right{
+    width: 27%;
+}
+.main:not(#middle):hover{
+    opacity: 0.3;
+}
+#left{
+    background-image: url("../pic/left_talk.jpg") ;
+}
+#middle{
+}
+#right{
+    background-image: url("../pic/right_date.jpg");
+}
+/*页面*/
+.page{
+    position: absolute;
+    margin-top: 50%;
+    background-color: #eee ;
+    width: 100%;
+    height: 100%;
+}
+.page iframe{
+    width: inherit;
+    height: inherit;
+}
+#two_page{
+    background-color: #eee ;
+}
+#three_page{
+    margin-top: 100%;
+}
